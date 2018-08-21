@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    /*IE低版本浏览器还需要将新增的标签转为块级*/
+    header,nav,section{ display: block; }
+        header.h1{ border:1px solid red; height: 100px; }
+        nav{ border:1px dashed blue; }
+        section{ border:1px solid orange; margin:10px 0; }
+
+        .logo{
+            color: red;
+            _color:blue;  /*IE6专属*/
+        }
+
+    </style>
+    <link rel="stylesheet" href="">
+    <!-- IE认识：hack方法 -->
+    <!-- lte  小于等于 -->
+    <!-- lt  小于 -->
+    <!-- gt  大于 -->
+    <!-- gte  大于等于 -->
+   <!--[if lte IE 9]>
+    <script>
+        // 让低版本浏览器也支持H5标签
+    
+       document.createElement("header");
+        document.createElement("nav");
+        document.createElement("section");
+    </script>
+    <![endif]-->
+
+
+
+</head>
+<body>
+    <!-- 头部注释 -->
+    <header class="h1">
+        <div class="logo">logo</div>
+        <nav class="menu">
+           <ul>
+                <li>首页</li>
+                <li>关于我们</li>
+            </ul> 
+        </nav>
+        <div class="search">
+            搜索
+        </div>
+    </header>
+    <!-- 网站主题 -->
+    <section class="layout">  
+        <article class="main">
+            文章主题
+        </article>
+        <aside class="sidebar">
+            边栏
+        </aside>
+    </section>
+    <!-- 网站尾部 -->
+    <footer>
+        版权信息
+    </footer>
+</body>
+</html>
